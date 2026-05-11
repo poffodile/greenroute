@@ -4,10 +4,10 @@ import { routeOptions } from "../../data/routeData";
 import "./RouteComparison.css";
 
 function getTransportIcon(transport) {
-  if (transport.includes("Car")) return <Car size={34} />;
-  if (transport.includes("Train")) return <Train size={34} />;
-  if (transport.includes("Bus")) return <Bus size={34} />;
-  return <Leaf size={34} />;
+  if (transport.includes("Car")) return <Car size={28} />;
+  if (transport.includes("Train")) return <Train size={28} />;
+  if (transport.includes("Bus")) return <Bus size={28} />;
+  return <Leaf size={28} />;
 }
 
 function RouteComparison() {

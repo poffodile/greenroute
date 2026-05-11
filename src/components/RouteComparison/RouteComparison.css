@@ -17,8 +17,9 @@
 .route-section-title {
   margin: 0 0 28px;
   color: #102017;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 900;
+  margin-bottom: 24px;
 }
 
 .route-card-grid {
@@ -31,9 +32,9 @@
   position: relative;
   background: rgba(255, 255, 255, 0.94);
   border: 2px solid transparent;
-  border-radius: 24px;
-  padding: 26px;
-  min-height: 230px;
+  border-radius: 22px;
+  padding: 24px;
+  min-height: 210px;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
   cursor: pointer;
 
@@ -46,8 +47,9 @@
 .route-card:hover {
   transform: translateY(-6px);
   border-color: #9bcf62;
-  box-shadow: 0 24px 55px rgba(6, 59, 34, 0.14);
+  /* box-shadow: 0 24px 55px rgba(6, 59, 34, 0.14); */
 }
+
 
 .selected-route {
   border-color: #4f8f3a;
@@ -101,6 +103,7 @@
 .route-metric {
   padding: 0 18px;
   border-right: 1px solid #d8d3c7;
+  align-items: start;
 }
 
 .route-metric:first-child {
@@ -115,17 +118,19 @@
 .route-metric strong {
   display: block;
   color: #102017;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 900;
   margin-bottom: 6px;
-  /* line-height: 1.2; */
+  line-height: 1.25; 
 }
 
 .route-metric span {
   display: block;
-  color: #6b6b61;
-  font-size: 13px;
+  /* color: #6b6b61; */
+  font-size: 11px;
+  color: #777267;
   font-weight: 700;
+
 }
 
 .route-metric.points strong {
