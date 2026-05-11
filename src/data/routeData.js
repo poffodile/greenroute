@@ -1,0 +1,32 @@
+export const routeOptions = [
+    {
+      id: 1,
+      name: "Fastest Route",
+      transport: "Car",
+      duration: "32 mins",
+      cost: "£4.80",
+      co2: "5.2kg CO₂",
+      points: "+10 pts",
+      recommended: false,
+    },
+    {
+      id: 2,
+      name: "Greenest Route",
+      transport: "Train + Walk",
+      duration: "42 mins",
+      cost: "£3.20",
+      co2: "1.1kg CO₂",
+      points: "+80 pts",
+      recommended: true,
+    },
+    {
+      id: 3,
+      name: "Cheapest Route",
+      transport: "Bus",
+      duration: "50 mins",
+      cost: "£2.00",
+      co2: "2.0kg CO₂",
+      points: "+50 pts",
+      recommended: false,
+    },
+  ];
