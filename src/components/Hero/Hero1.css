@@ -1,0 +1,308 @@
+.hero {
+    width: 100%;
+    min-height: calc(100vh - 72px);
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    padding: 80px 64px;
+    gap: 60px;
+  
+    background:
+      linear-gradient(
+        135deg,
+        #f7f1e4 0%,
+        #edf7e8 100%
+      );
+  }
+  
+  /* LEFT SIDE */
+  
+  .hero-left {
+    flex: 1;
+    max-width: 620px;
+  }
+  
+  .hero-small-text {
+    color: #4f7d57;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+  
+  .hero-title {
+    font-size: 76px;
+    line-height: 1.05;
+    font-weight: 900;
+    color: #063b22;
+  
+    margin: 0 0 28px;
+    white-space: pre-line;
+  }
+  
+  .hero-subtitle {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #47614e;
+  
+    margin-bottom: 40px;
+  }
+  
+  /* BUTTONS */
+  
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .hero-primary-button {
+    border: none;
+    background: #063b22;
+    color: white;
+  
+    padding: 18px 28px;
+    border-radius: 18px;
+  
+    font-size: 16px;
+    font-weight: 800;
+  
+    cursor: pointer;
+  }
+  
+  .hero-secondary-button {
+    border: 2px solid #063b22;
+    background: transparent;
+    color: #063b22;
+  
+    padding: 18px 28px;
+    border-radius: 18px;
+  
+    font-size: 16px;
+    font-weight: 800;
+  
+    cursor: pointer;
+  }
+  
+  /* RIGHT SIDE */
+  
+  .hero-right {
+    flex: 1;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-visual {
+    position: relative;
+  
+    width: 100%;
+    max-width: 620px;
+    height: 620px;
+  
+    border-radius: 40px;
+  
+    background:
+      linear-gradient(
+        180deg,
+        #b7ddb0 0%,
+        #6ea67a 100%
+      );
+  
+    overflow: hidden;
+  
+    box-shadow:
+      0 25px 60px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Decorative circles */
+  
+  .hero-circle {
+    position: absolute;
+    border-radius: 999px;
+  }
+  
+  .hero-circle-1 {
+    width: 260px;
+    height: 260px;
+  
+    background: rgba(255,255,255,0.15);
+  
+    top: 60px;
+    right: 40px;
+  }
+  
+  .hero-circle-2 {
+    width: 180px;
+    height: 180px;
+  
+    background: rgba(255,255,255,0.1);
+  
+    bottom: 120px;
+    left: 40px;
+  }
+  
+  .hero-circle-3 {
+    width: 120px;
+    height: 120px;
+  
+    background: rgba(255,255,255,0.12);
+  
+    top: 260px;
+    left: 220px;
+  }
+  
+  /* IMPACT CARD */
+  
+  .impact-card {
+    position: absolute;
+  
+    bottom: 40px;
+    right: 40px;
+  
+    width: 280px;
+  
+    background: white;
+  
+    padding: 24px;
+    border-radius: 24px;
+  
+    box-shadow:
+      0 10px 40px rgba(0,0,0,0.12);
+  }
+  
+  .impact-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #4f7d57;
+  
+    margin-bottom: 12px;
+  }
+  
+  .impact-value {
+    font-size: 28px;
+    font-weight: 900;
+    color: #063b22;
+  
+    margin: 0 0 12px;
+  }
+  
+  .impact-subtext {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #5e6f63;
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 1200px) {
+    .hero-title {
+      font-size: 62px;
+    }
+  
+    .hero-visual {
+      height: 520px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .hero {
+      flex-direction: column;
+      padding: 60px 32px;
+    }
+  
+    .hero-left {
+      max-width: 100%;
+    }
+  
+    .hero-title {
+      font-size: 58px;
+    }
+/*   
+    .hero-visual {
+      width: 100%;
+      height: 500px;
+    } */
+
+    .hero-visual {
+        position: relative;
+      
+        width: 100%;
+        max-width: 620px;
+        height: 620px;
+      
+        border-radius: 40px;
+      
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      
+        overflow: hidden;
+      
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+      }
+
+      .hero-visual::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(6, 59, 34, 0.1),
+          rgba(6, 59, 34, 0.55)
+        );
+      }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding: 50px 20px;
+    }
+  
+    .hero-title {
+      font-size: 44px;
+    }
+  
+    .hero-subtitle {
+      font-size: 18px;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+    }
+  
+    .hero-primary-button,
+    .hero-secondary-button {
+      width: 100%;
+    }
+  
+    .hero-visual {
+      height: 420px;
+    }
+  
+    .impact-card {
+      width: calc(100% - 40px);
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 36px;
+    }
+  
+    .hero-small-text {
+      font-size: 12px;
+    }
+  
+    .hero-subtitle {
+      font-size: 16px;
+    }
+  
+    .hero-visual {
+      height: 360px;
+    }
+  }
