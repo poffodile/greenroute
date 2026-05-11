@@ -1,71 +1,76 @@
-import { Car, Train, Bus, Leaf, Clock, Coins } from "lucide-react";
+import { useState } from "react";
+import { Car, Train, Bus, Leaf, Clock, ArrowRight } from "lucide-react";
 import { routeOptions } from "../../data/routeData";
 import "./RouteComparison.css";
 
 function getTransportIcon(transport) {
-  if (transport.includes("Car")) return <Car size={26} />;
-  if (transport.includes("Train")) return <Train size={26} />;
-  if (transport.includes("Bus")) return <Bus size={26} />;
-  return <Leaf size={26} />;
+  if (transport.includes("Car")) return <Car size={34} />;
+  if (transport.includes("Train")) return <Train size={34} />;
+  if (transport.includes("Bus")) return <Bus size={34} />;
+  return <Leaf size={34} />;
 }
 
 function RouteComparison() {
+  const [selectedRoute, setSelectedRoute] = useState(null);
+
   return (
     <section className="route-section">
-      <div className="route-header">
-        <p>ROUTE OPTIONS</p>
-        <h2>Compare your journey choices</h2>
-        <span>
-          See time, cost, CO₂ emissions and rewards before choosing your route.
-        </span>
-      </div>
+      <div className="route-container">
+        <h2 className="route-section-title">Compare Your Route Options</h2>
 
-      <div className="route-card-grid">
-        {routeOptions.map((route) => (
-          <article
-            key={route.id}
-            className={
-              route.recommended
-                ? "route-card recommended-route"
-                : "route-card"
-            }
-          >
-            {route.recommended && (
-              <div className="recommended-badge">
-                <Leaf size={15} />
-                Recommended
-              </div>
-            )}
+        <div className="route-card-grid">
+          {routeOptions.map((route) => (
+            <article
+              key={route.id}
+              onClick={() => setSelectedRoute(route.id)}
+              className={
+                selectedRoute === route.id
+                  ? "route-card selected-route"
+                  : "route-card"
+              }
+            >
+              {selectedRoute === route.id && (
+                <div className="recommended-badge">
+                  Recommended
+                </div>
+              )}
 
-            <div className="route-icon">
-              {getTransportIcon(route.transport)}
-            </div>
+              <div className="route-card-top">
+                <div className="route-icon">
+                  {getTransportIcon(route.transport)}
+                </div>
 
-            <h3>{route.name}</h3>
-            <p className="route-transport">{route.transport}</p>
-
-            <div className="route-details">
-              <div>
-                <Clock size={17} />
-                <span>{route.duration}</span>
+                <h3>{route.name}</h3>
               </div>
 
-              <div>
-                <Coins size={17} />
-                <span>{route.cost}</span>
+              <div className="route-divider"></div>
+
+              <div className="route-metrics">
+                <div className="route-metric">
+                  <strong>{route.duration}</strong>
+                  <span>Travel Time</span>
+                </div>
+
+                <div className="route-metric">
+                  <strong>{route.co2}</strong>
+                  <span>Emissions</span>
+                </div>
+
+                <div className="route-metric points">
+                  <strong>{route.points}</strong>
+                  <span>Points</span>
+                </div>
               </div>
 
-              <div>
-                <Leaf size={17} />
-                <span>{route.co2}</span>
-              </div>
-            </div>
+              <div className="route-divider"></div>
 
-            <div className="route-points">
-              {route.points}
-            </div>
-          </article>
-        ))}
+              <div className="route-bottom">
+                <span>via {route.transport}</span>
+                <ArrowRight size={26} />
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

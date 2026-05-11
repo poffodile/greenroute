@@ -53,7 +53,7 @@ function JourneyPlanner() {
           </label>
 
           <button className="journey-search-button">
-            {journeyPlannerData.buttonText}
+            <span>{journeyPlannerData.buttonText}</span>
             <Search size={18} />
           </button>
         </div>
