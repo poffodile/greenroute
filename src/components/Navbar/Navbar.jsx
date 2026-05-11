@@ -1,10 +1,25 @@
+import { useState } from "react";
 import { PawPrint, Bell } from "lucide-react";
 import "./Navbar.css";
 
 function Navbar() {
+  // Tracks which nav item is selected
+  const [activeLink, setActiveLink] = useState("Home");
+
+  // Navigation items
+  const navLinks = [
+    "Home",
+    "Journey Planner",
+    "Rewards",
+    "Sustainability",
+    "Community",
+  ];
+
   return (
     <header className="navbar">
       <nav className="navbar-container">
+
+        {/* Logo */}
         <div className="navbar-logo">
           <PawPrint className="navbar-logo-icon" />
 
@@ -14,24 +29,34 @@ function Navbar() {
           </div>
         </div>
 
+        {/* Navigation Links */}
         <div className="navbar-links">
-          <a className="active" href="#">Home</a>
-          <a href="#">Journey Planner</a>
-          <a href="#">Rewards</a>
-          <a href="#">Sustainability</a>
-          <a href="#">Community</a>
+          {navLinks.map((link) => (
+            <button
+              key={link}
+              className={activeLink === link ? "active" : ""}
+              onClick={() => setActiveLink(link)}
+            >
+              {link}
+            </button>
+          ))}
         </div>
 
+        {/* Right Side */}
         <div className="navbar-actions">
+
           <button className="navbar-icon-button">
             <Bell size={20} />
           </button>
 
-          <div className="navbar-profile">P</div>
+          <div className="navbar-profile">
+            P
+          </div>
 
           <button className="navbar-start-button">
             Start Journey
           </button>
+
         </div>
       </nav>
     </header>

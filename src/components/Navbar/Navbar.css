@@ -5,10 +5,11 @@
   }
   
   .navbar-container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     height: 72px;
     margin: 0 auto;
     padding: 0 32px;
+    width: 100%;
   
     display: flex;
     align-items: center;
@@ -45,26 +46,30 @@
     gap: 32px;
   }
   
-  .navbar-links a {
+  .navbar-links button {
+    background: transparent;
+    border: none;
     color: white;
-    text-decoration: none;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
+    padding-bottom: 8px;
+    transition: 0.2s ease;
   }
   
-  .navbar-links a:hover {
+  .navbar-links button:hover {
     color: #a6d854;
   }
   
   .navbar-links .active {
-    padding-bottom: 8px;
     border-bottom: 2px solid #a6d854;
+    color: #a6d854;
   }
   
   .navbar-actions {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 24px;
   }
   
   .navbar-icon-button {
