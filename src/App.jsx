@@ -7,6 +7,8 @@ import RoutePreview from "./components/RoutePreview/RoutePreview";
 import { RouteOffIcon } from "lucide-react";
 import Rewards from "./components/Rewards/Rewards";
 import ImpactBanner from "./components/ImpactBanner/ImpactBanner";
+import HowItWorks from "./components/HowItWorks/HowItWorks";
+import Leaderboard from "./components/Leaderboard/Leaderboard";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <RoutePreview />
       <Rewards />
      <ImpactBanner />
+     <HowItWorks />
+     <Leaderboard />
     </div>
   );
 }
