@@ -5,6 +5,7 @@ import "./App.css";
 import RouteComparison from "./components/RouteComparison/RouteComparison";
 import RoutePreview from "./components/RoutePreview/RoutePreview";
 import { RouteOffIcon } from "lucide-react";
+import Rewards from "./components/Rewards/Rewards";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <JourneyPlanner />
       <RouteComparison />
       <RoutePreview />
+      <Rewards />
     </div>
   );
 }
