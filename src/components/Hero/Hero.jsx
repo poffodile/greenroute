@@ -1,13 +1,13 @@
 import "./Hero.css";
 import { heroData } from "../../data/homeData";
-import image from "../../assets/images/image.png";
+import liverpool_image from "../../assets/images/liverpool_image.png";
 import { Leaf, PlayCircle } from "lucide-react";
 
 function Hero() {
   return (
     <section
       className="hero"
-      style={{ backgroundImage: `url(${image})` }}
+      style={{ backgroundImage: `url(${liverpool_image})` }}
     >
       <div className="hero-overlay"></div>
 

@@ -21,8 +21,10 @@ function HowItWorks() {
                   <p>{item.description}</p>
                 </div>
 
-                <div className="how-emoji">{item.emoji}</div>
-              </article>
+                <div className="how-image-wrapper">
+                    <img src={item.image} alt={item.title} className="how-image" />
+                    </div>
+             </article>
 
               {index < howItWorksData.length - 1 && (
                 <ArrowRight className="how-arrow" size={24} />

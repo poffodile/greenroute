@@ -1,7 +1,7 @@
 .how-section {
     width: 100%;
     background: #f7f1e4;
-    padding: 0 64px 70px;
+    padding: 0 64px 60px;
   }
   
   .how-container {
@@ -14,16 +14,16 @@
     align-items: center;
     gap: 8px;
   
-    margin: 0 0 24px;
+    margin: 0 0 22px;
     color: #102017;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 900;
   }
   
   .how-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 34px;
+    gap: 24px;
   }
   
   .how-step-wrapper {
@@ -31,15 +31,15 @@
   }
   
   .how-card {
-    min-height: 150px;
+    min-height: 130px;
     background: rgba(255, 255, 255, 0.94);
     border: 1px solid rgba(6, 59, 34, 0.08);
     border-radius: 18px;
-    padding: 24px;
+    padding: 20px;
   
     display: grid;
-    grid-template-columns: 40px 1fr 70px;
-    gap: 18px;
+    grid-template-columns: 34px 1fr 54px;
+    gap: 14px;
     align-items: center;
   
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
@@ -64,26 +64,33 @@
   .how-card h3 {
     margin: 0 0 8px;
     color: #102017;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 900;
   }
   
   .how-card p {
     margin: 0;
     color: #526b58;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.5;
     font-weight: 600;
   }
   
-  .how-emoji {
-    font-size: 44px;
-    text-align: center;
+  .how-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .how-image {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
   }
   
   .how-arrow {
     position: absolute;
-    right: -30px;
+    right: -24px;
     top: 50%;
     transform: translateY(-50%);
     color: #8aa14a;
