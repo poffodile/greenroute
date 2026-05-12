@@ -1,4 +1,12 @@
-import { Calendar, Clock, Leaf, MapPin, Search, SlidersHorizontal } from "lucide-react";
+import {
+  Calendar,
+  Clock,
+  Leaf,
+  MapPin,
+  Search,
+  SlidersHorizontal,
+} from "lucide-react";
+
 import { journeyPlannerData } from "../../data/journeyData";
 import "./JourneyPlanner.css";
 
@@ -16,7 +24,7 @@ function JourneyPlanner() {
             <span>From</span>
             <div className="journey-input-box">
               <MapPin size={18} />
-              <input placeholder={journeyPlannerData.fromPlaceholder} />
+              <input defaultValue={journeyPlannerData.fromPlaceholder} />
             </div>
           </label>
 
@@ -24,7 +32,7 @@ function JourneyPlanner() {
             <span>To</span>
             <div className="journey-input-box">
               <MapPin size={18} />
-              <input placeholder={journeyPlannerData.toPlaceholder} />
+              <input defaultValue={journeyPlannerData.toPlaceholder} />
             </div>
           </label>
 
@@ -48,7 +56,12 @@ function JourneyPlanner() {
             <span>Preference</span>
             <div className="journey-input-box">
               <SlidersHorizontal size={18} />
-              <input value={journeyPlannerData.preference} readOnly />
+              <select defaultValue={journeyPlannerData.preference}>
+                <option>Lowest CO₂</option>
+                <option>Fastest Route</option>
+                <option>Cheapest Route</option>
+                <option>Balanced</option>
+              </select>
             </div>
           </label>
 

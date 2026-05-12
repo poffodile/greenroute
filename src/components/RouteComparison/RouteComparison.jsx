@@ -1,5 +1,12 @@
-import { useState } from "react";
-import { Car, Train, Bus, Leaf, Clock, ArrowRight } from "lucide-react";
+import {
+  Car,
+  Train,
+  Bus,
+  Leaf,
+  Clock,
+  ArrowRight,
+} from "lucide-react";
+
 import { routeOptions } from "../../data/routeData";
 import "./RouteComparison.css";
 
@@ -7,45 +14,56 @@ function getTransportIcon(transport) {
   if (transport.includes("Car")) return <Car size={28} />;
   if (transport.includes("Train")) return <Train size={28} />;
   if (transport.includes("Bus")) return <Bus size={28} />;
+
   return <Leaf size={28} />;
 }
 
-function RouteComparison() {
-  const [selectedRoute, setSelectedRoute] = useState(null);
-
+function RouteComparison({
+  selectedRouteId,
+  setSelectedRouteId,
+}) {
   return (
     <section className="route-section">
       <div className="route-container">
-        <h2 className="route-section-title">Compare Your Route Options</h2>
+
+        <h2 className="route-section-title">
+          Compare Your Route Options
+        </h2>
 
         <div className="route-card-grid">
+
           {routeOptions.map((route) => (
+
             <article
               key={route.id}
-              onClick={() => setSelectedRoute(route.id)}
+              onClick={() => setSelectedRouteId(route.id)}
               className={
-                selectedRoute === route.id
+                selectedRouteId === route.id
                   ? "route-card selected-route"
                   : "route-card"
               }
             >
-              {selectedRoute === route.id && (
+
+              {selectedRouteId === route.id && (
                 <div className="recommended-badge">
                   Recommended
                 </div>
               )}
 
               <div className="route-card-top">
+
                 <div className="route-icon">
                   {getTransportIcon(route.transport)}
                 </div>
 
                 <h3>{route.name}</h3>
+
               </div>
 
               <div className="route-divider"></div>
 
               <div className="route-metrics">
+
                 <div className="route-metric">
                   <strong>{route.duration}</strong>
                   <span>Travel Time</span>
@@ -60,16 +78,20 @@ function RouteComparison() {
                   <strong>{route.points}</strong>
                   <span>Points</span>
                 </div>
+
               </div>
 
               <div className="route-divider"></div>
 
               <div className="route-bottom">
-                <span>via {route.transport}</span>
-                <ArrowRight size={26} />
+                <span>{route.via}</span>
+                <ArrowRight size={22} />
               </div>
+
             </article>
+
           ))}
+
         </div>
       </div>
     </section>

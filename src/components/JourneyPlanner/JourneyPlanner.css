@@ -114,6 +114,18 @@
     font-size: 14px;
     font-weight: 700;
   }
+
+  .journey-input-box select {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+  
+    color: #063b22;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
   
   /* Responsive */
   @media (max-width: 1200px) {
