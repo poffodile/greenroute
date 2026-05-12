@@ -6,6 +6,7 @@ import RouteComparison from "./components/RouteComparison/RouteComparison";
 import RoutePreview from "./components/RoutePreview/RoutePreview";
 import { RouteOffIcon } from "lucide-react";
 import Rewards from "./components/Rewards/Rewards";
+import ImpactBanner from "./components/ImpactBanner/ImpactBanner";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <RouteComparison />
       <RoutePreview />
       <Rewards />
+     <ImpactBanner />
     </div>
   );
 }
